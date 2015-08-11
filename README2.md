@@ -7,11 +7,11 @@
 
 # Maquinari bàsic utilitzat amb el sistema SportIdent
 ## Bases
-### BF8
+### BSF8
 
 
 * és la reglamentària. Conté un display que permet visualitzar la informació emmagatzemada en la base.
-### BF7-USB
+### BSF7-USB
 
 
 * permet comunicar qualsevol part del sistema amb l'ordinador: programar bases, descarregar pinces, ...
