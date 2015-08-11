@@ -1,9 +1,6 @@
 
 # Introducció 
-* Formador: Néstor Bohigas
-* Llicències OE: les llicències pel nou programa (OE2010) han canviat. 
-* A partir de la temporada 2012 ÉS OBLIGAT utilitzar la versió OE2010. Els clubs s'han de comprar la llicència!!
-    * La llicència és perpètua.
+* Formador: Marc Nicolau
 
 * Llicències Autodownload: és una llicència anual.
 
