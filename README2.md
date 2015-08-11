@@ -12,7 +12,7 @@
 
 * és la reglamentària. Conté un display que permet visualitzar la informació emmagatzemada en la base.
 ### BSF7-USB
-![BSF7-USB](/images/sportident/bsf7-usb.jpg =100x100)
+![BSF7-USB](/images/sportident/bsf7-usb.jpg)
 
 * permet comunicar qualsevol part del sistema amb l'ordinador: programar bases, descarregar pinces, ...
 
