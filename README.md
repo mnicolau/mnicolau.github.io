@@ -23,9 +23,4 @@ You can @mention a GitHub username to generate a link to their profile. The resu
 ### Suport o contacte
 Per a qualsevol problema o dubte contacteu amb mnicolau@infobosccoma.net
 
-#Exemple de codi
-```
-$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-```
+
