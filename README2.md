@@ -67,6 +67,7 @@
 ### Característiques generals
 * Es poden mullar.
 * Es grava el codi de la base i hh:mm:ss de la base.
+
 ### Tipus
 #### P-CARD
 * Caducaven als 5 anys. 
