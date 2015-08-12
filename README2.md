@@ -96,6 +96,7 @@
 * 128 memòries
 * Pensada per a raids
 * Preu similar a la SI6 (que ja no es fabrica)
+
 ### Funcionament del xip
 * Si passen més de 10 segons des de la darrera pinçada, es gasta una altra memòria.
 
