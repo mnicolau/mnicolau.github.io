@@ -1,31 +1,19 @@
 <!-- MarkdownTOC -->
 
 - [Introducció](#introducció)
-- [Maquinari bàsic utilitzat amb el sistema SportIdent](#maquinari-bàsic-utilitzat-amb-el-sistema-sportident)
+- [Dispositius basics utilitzats amb el sistema SportIdent](#dispositius-basics-utilitzats-amb-el-sistema-sportident)
     - [Bases](#bases)
     - [Xip (tarja electrònica)](#xip-tarja-electrònica)
-    - [Funcionament del xip](#funcionament-del-xip)
-- [Altre Maquinari](#altre-maquinari)
-- [Programar les bases](#programar-les-bases)
-    - [Control](#control)
-    - [Start](#start)
-    - [Finish](#finish)
-    - [Read SI Cards](#read-si-cards)
-    - [Clean](#clean)
-    - [Check](#check)
-    - [Printout](#printout)
-    - [Start with time trigger](#start-with-time-trigger)
-    - [Finish with time trigger](#finish-with-time-trigger)
-- [Base SI-Master](#base-si-master)
-- [Bases de control](#bases-de-control)
-- [Programari](#programari)
-    - [SI-Config i SI-Manager](#si-config-i-si-manager)
+    - [Altres dispositius](#altres-dispositius)
+- [Programar les bases electròniques](#programar-les-bases-electròniques)
+    - [Modes de treball](#modes-de-treball)
+    - [Base SI-Master](#base-si-master)
+    - [A tenir en compte...](#a-tenir-en-compte)
+    - [Programari utilitzat](#programari-utilitzat)
     - [SI-Boot](#si-boot)
-    - [Autodownload](#autodownload)
-    - [OE2010 (v.11)](#oe2010-v11)
+- [Programa de gestió de curses: OE2010 (v.11)](#programa-de-gestió-de-curses-oe2010-v11)
+    - [Versions](#versions)
     - [OEScore v.10.3](#oescore-v103)
-- [Programar estacions de control](#programar-estacions-de-control)
-    - [SI-Config](#si-config)
 - [Actualitzar el Firmware de les bases](#actualitzar-el-firmware-de-les-bases)
 - [OE 2010 v.11](#oe-2010-v11)
     - [Multidia](#multidia)
@@ -46,7 +34,7 @@
 - [n el camp COMPROBACIÓN DE CÓDIGOS posar-lo a MIXTA](#n-el-camp-comprobación-de-códigos-posar-lo-a-mixta)
     - [i és tot SCORE, en la columna DIVISOR no hi posem res.](#i-és-tot-score-en-la-columna-divisor-no-hi-posem-res)
     - [i hi ha una part línial (els controls surten en color NEGRE) i la darrera és SCORE (els controls surten de color BLAU), en la columna DIVISOR cal posar-hi el codi de control que fa de darrer control del primer tram.](#i-hi-ha-una-part-línial-els-controls-surten-en-color-negre-i-la-darrera-és-score-els-controls-surten-de-color-blau-en-la-columna-divisor-cal-posar-hi-el-codi-de-control-que-fa-de-darrer-control-del-primer-tram)
-- [Autodownload](#autodownload-1)
+- [Autodownload](#autodownload)
     - [Add Event](#add-event)
     - [Recorreguts (''Course'')](#recorreguts-course)
     - [Controls](#controls)
@@ -61,163 +49,151 @@
 
 # Introducció 
 * Formador: Marc Nicolau
+* Data: agost de 2015
 
-* Llicències Autodownload: és una llicència anual.
 
-
-# Maquinari bàsic utilitzat amb el sistema SportIdent
+# Dispositius basics utilitzats amb el sistema SportIdent
 ## Bases
 ### BSF8
 * és la reglamentària. Conté un display que permet visualitzar la informació emmagatzemada en la base.
 
 ### BSF7-USB
+* Permet comunicar qualsevol part del sistema amb l'ordinador:
+** programar bases, descarregar pinces, ...
+
 ![BSF7-USB](/images/sportident/bsf7-usb.jpg)
 
-* permet comunicar qualsevol part del sistema amb l'ordinador: programar bases, descarregar pinces, ...
-
-
 ## Xip (tarja electrònica)
-    *Tarja P-CARD (funciona amb el mateix programari que els xips) i T-CARD (les planeres, pensades per activitats turístiques), té 20 memòries + check + start + finish. Les primeres caducaven als 5 anys, ara ja no.
-    *Es poden mullar.
-    *Es grava el codi de la base i hh:mm:ss de la base.
-    *Models:
-    **'''SI5:''' vermella (ja no es fabrica)
-    *    *36 memòries (controls). Velocitat : X. Més lenta que les modernes.
-    *    *Només curses de 12h.
-    **'''SI6:'''
-    *    * també es permet gravar el dia de la setmana
-    *    * Curses de fins a 7 dies.
-    *    * 60 memòries
-    *    * Molt més ràpid
-    **SI8:
-    *    *Encara més ràpid.
-    *    *30 memòries
-    *    *Preu més econòmic.
-    **SI9:
-    *    *50 memòries
-    *    *Mateixa velocitat que la SI8 
-    *    *Èlit, Rogaine
-    **SI10:
-    *    *128 memòries
-    *    *Pensada per RAID
-    *    *Mateix preu de la SI6 (que ja no es fabrica)
-## Funcionament del xip
-* Si no passen + de 10seg des de la darrera pinçada, es gasta una altra memòria.
+### Característiques generals
+* Es poden mullar.
+* Es grava el codi de la base i hh:mm:ss de la base.
+### Tipus
+#### P-CARD
+* Caducaven als 5 anys. 
+#### T-CARD
+* Les planes, pensades per activitats turístiques.
+* Té 20 memòries + check + start + finish.
+#### SI5
+* Vermella (ja no es fabrica)
+* 36 memòries (controls). 
+* Velocitat : X. Més lenta que les modernes.
+* Només permet curses de 12h.
+#### SI6
+* Permet gravar el dia de la setmana.
+* Curses de fins a 7 dies.
+* 60 memòries
+* Molt més ràpida que la SI6
+#### SI8
+* Encara més ràpida.
+* 30 memòries
+* Preu més econòmic que la SI6.
+#### SI9
+* 50 memòries.
+* Mateixa velocitat que la SI8. 
+* Per a corredors d'èlit, Rogaines, etc.
+#### SI10
+* 128 memòries
+* Pensada per a raids
+* Preu similar a la SI6 (que ja no es fabrica)
+### Funcionament del xip
+* Si passen més de 10 segons des de la darrera pinçada, es gasta una altra memòria.
 
-# Altre Maquinari
-* Bases amb radiofreqüència
-* Impressores tèrmiques
+## Altres dispositius
+### Bases amb radiofreqüència
+### Impressores tèrmiques
 
 
-# Programar les bases
-* Totes les bases que no són les de control, números de l'1 al 30.
+# Programar les bases electròniques
+* ''IMPORTANT'': Totes les bases que no són les de control, números de l'1 al 30.
 
-## Control
-*Números superiors al 30: del 31 endavant (el 31 correspondria a la balisa 1).
-## Start
-*Com a sortida (de l'1 al 30)
-## Finish
-*Meta (de l'1 al 30)
+## Modes de treball
+### Control
+* Números superiors al 30: del 31 endavant (el 31 correspondria a la fita 1).
+### Start
+* Com a sortida (número de l'1 al 30)
+### Finish
+* Meta (número de l'1 al 30)
+### Read SI Cards
+* Per descarregar la informació de la tarjeta a la base.
+* Serveix per:
+** Entrenaments.
+** Descarregar totes les targes a la base (per si falla el PC).
+* La base USB pot tenir qualsevol de les altres funcions.
+### Clean
+* Neteja
+### Check
+* Comprova si està buit
+* No pita si no està net el xip.
+### Printout
+* Permet imprimir directament a impressores de paper tèrmic.
+### Start with time trigger
+* Amb fotocèl·lula
+### Finish with time trigger
+* Amb fotocèl·lula
 
-## Read SI Cards
-*Descarrega tota la informació de la tarjeta a la base.
-*Serveix per:
-    *Entrenaments.
-    *Descarregar totes les targes a la base (per si falla el PC).
-*La base USB pot tenir qualsevol de les altres funcions.
+## Base SI-Master
+* Va juntament amb les targes liles ON-OFF
+* 3 funcions (es canvia de mode pinçant successives vegades fins a trobar el que interessa en el display):
+**''Time master'': per posar en hora les altres bases
+**''Extended master'': per posar en hora i netejar el backup de la base, tot alhora.
 
-## Clean
-*Neteja
+## A tenir en compte...
+* Per sota de 3.1V de càrrega no utilitzar les bases de control.
 
-## Check
-*Comprova si està buit
-*No pita si no està net el xip.
+## Programari utilitzat
+### SI-Config
+* Per programar les bases.
+#### Modes de treball
+* Direct: per a programar la base USB.
+* Remote: per a programar la base de control que hi ha sobre la USB.
+#### Opcions del programa
+##### READ
+* ''Working time'': temps de treball (per anar bé, 3 hores, 03:00:00)
+* ''Auto send'': funció per enviar a Internet o altre dispositiu extern quan es fa la pinçada.
+* Icona de la lupa: permet llegir les dades internes de la base de control.
 
-## Printout
-*Permet imprimir directament a impressores de paper tèrmic.
+##### WRITE
+* ''Code no.'': número del control
+* ''Working time'': període de funcionament
+* ''Set time'': botó independent de l'escriptura, i el que fa és posar en hora la base.
+* Bóto ''WRITE'': configura tots els paràmetres i esborra el backup de la base.
+*'' Turn off after write'': apaga la base després de reprogramar-la.
+*'''COMPTE!''' Cada vegada que es prem el botó WRITE s'incrementa automàticament el ''Code no.'' en el programa. Si deixem la mateixa base i tornem a prémer WRITE ens canviarà el ''Code no.''
 
-## Start with time trigger
-*Amb fotocèl·lula
+##### LOG FILE
+* Per veure el que s'ha fet en el programa
 
-## Finish with time trigger
-*Amb fotocèl·lula
+##### VIEW
+*Standard: el més segur i senzill
+*Extended: apareixen nous camps
+    *''Real time clock''
+    *''Sprint'': capturar ms per a cèl·lules fotoelèctriques
+    *''Stop if backup is full'': s'apaga si s'ha omplert el backup
+    *''Extended protocol''
 
-# Base SI-Master
-*Va juntament amb les targes liles ON-OFF
-*3 funcions (es canvia de mode pinçant successives vegades fins a trobar el que interessa en el display):
-*#Time master: per posar en hora les altres bases
-*#Extended master: per posar en hora i netejar el backup de la base, tot alhora.
+##### View Punch (icona amb rellotge)
+*Recuperar les descàrregues de la base USB.
+*Ha de funcionar en mode DIRECT.
 
-# Bases de control
-*Per sota de 3.1V no utilitzar les bases
 
-# Programari
-## SI-Config i SI-Manager
-*Per programar les bases: sobretot el SI-Config.
 
 ## SI-Boot
-*Per actualitzar el firmware de cada base
-
-## Autodownload
-*Per RAIDs
-*Molt segur i funcional.
-*La llicència la pot cedir la FCOC (el fabricant ho permet).
+* Per actualitzar el firmware de cada base
 
 
-## OE2010 (v.11)
-*Versions: 500 participants, 1000 participants (PRO), + de 1000 participants (PRO LARGE).
-*Per les 3 versions, hi ha la funció MT (per varis dies): és una llicència addicional i cal comprar-la.
+
+# Programa de gestió de curses: OE2010 (v.11)
+## Versions
+* 500 participants (STANDARD)
+* 1000 participants (PRO)
+* + de 1000 participants (PRO LARGE).
+* Per a les 3 versions hi ha la funció MT ('''multiday''', per a varis dies): és una llicència addicional i cal comprar-la.
 
 ## OEScore v.10.3
 *Per organitzar curses score individuals o per equips.
 
-# Programar estacions de control
-*Abans s'utilitzava el SI-Manager.
-
-## SI-Config
-*Modes de treball:
-    *Direct: programes la base USB
-    *Remote: programes la base de control que hi ha sobre la USB.
-
-### READ
 
 
-*Working time: temps de treball (per anar bé, 3 hores, 03:00:00)
-*Auto send: funció per enviar a Internet o altre dispositiu extern  quan es fa la pinçada.
-*Icona de la lupa: permet llegir les dades internes de la base de control.
-
-### WRITE
-
-
-* Code no: número del control
-* Working time: període de funcionament
-* Set time: botó independent de l'escriptura i el que fa és posar en hora la base.
-* Bóto WRITE: configura tots els paràmetres i esborra el backup de la base.
-*'' Turn off after write'': apaga la base després de reprogramar-la.
-
-*'''COMPTE!''' Cada vegada que es prem el botó WRITE s'incrementa automàticament el Code no en el programa. Si deixem la mateixa base i tornem a prémer WRITE ens canviarà el Code no.
-
-
-### LOG FILE
-
-
-* Per veure el que s'ha fet en el programa
-
-### VIEW
-
-
-*Standard: el més segur i senzill
-*Extended: apareixen nous camps
-    *Real time clock
-    *Sprint: capturar ms per a cèl·lules fotoelèctriques
-    *Stop if backup is full: s'apaga si s'ha omplert el backup
-    *Extended protocol
-
-### View Punch (icona amb rellotge)
-
-
-*Recuperar les descàrregues de la base USB.
-*Ha de funcionar en mode DIRECT.
 
 ### COMPTE AMB LA BASE USB
 
