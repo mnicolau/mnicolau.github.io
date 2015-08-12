@@ -409,3 +409,4 @@
 [[Fitxer:ReglesRogaine.png]([Fitxer:BandesTemps.png]])]
 
 * Si es creen dos tipus de cursa (6 i 12h per exemple) cal assignar un temps límit diferent a cada categoria.
+ 
