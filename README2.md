@@ -9,15 +9,14 @@
     - [Modes de treball](#modes-de-treball)
     - [Base SI-Master](#base-si-master)
     - [A tenir en compte...](#a-tenir-en-compte)
+    - [COMPTE AMB LA BASE USB!!](#compte-amb-la-base-usb)
     - [Programari utilitzat](#programari-utilitzat)
     - [SI-Boot](#si-boot)
 - [Programa de gestió de curses: OE2010 (v.11)](#programa-de-gestió-de-curses-oe2010-v11)
     - [Versions](#versions)
-    - [OEScore v.10.3](#oescore-v103)
-- [Actualitzar el Firmware de les bases](#actualitzar-el-firmware-de-les-bases)
-- [OE 2010 v.11](#oe-2010-v11)
-    - [Multidia](#multidia)
-    - [Crear un ESEDEVENIMENT](#crear-un-esedeveniment)
+    - [Introduir la llicència](#introduir-la-llicència)
+    - [Gestió de curses de varis dies](#gestió-de-curses-de-varis-dies)
+    - [Crear una CURSA (esdeveniment)](#crear-una-cursa-esdeveniment)
     - [CONFIGURACIÓ DE L'ESEDEVENIMENT](#configuració-de-lesedeveniment)
     - [COPIA DE SEGURETAT](#copia-de-seguretat)
     - [INSCRIPCIONS](#inscripcions)
@@ -34,9 +33,10 @@
 - [n el camp COMPROBACIÓN DE CÓDIGOS posar-lo a MIXTA](#n-el-camp-comprobación-de-códigos-posar-lo-a-mixta)
     - [i és tot SCORE, en la columna DIVISOR no hi posem res.](#i-és-tot-score-en-la-columna-divisor-no-hi-posem-res)
     - [i hi ha una part línial (els controls surten en color NEGRE) i la darrera és SCORE (els controls surten de color BLAU), en la columna DIVISOR cal posar-hi el codi de control que fa de darrer control del primer tram.](#i-hi-ha-una-part-línial-els-controls-surten-en-color-negre-i-la-darrera-és-score-els-controls-surten-de-color-blau-en-la-columna-divisor-cal-posar-hi-el-codi-de-control-que-fa-de-darrer-control-del-primer-tram)
+- [OEScore v.10.3](#oescore-v103)
 - [Autodownload](#autodownload)
     - [Add Event](#add-event)
-    - [Recorreguts (''Course'')](#recorreguts-course)
+    - [Recorreguts (_Course_)](#recorreguts-_course_)
     - [Controls](#controls)
     - [Penalties](#penalties)
 - [OEScore (Rogaines)](#oescore-rogaines)
@@ -69,29 +69,36 @@
 * Es grava el codi de la base i hh:mm:ss de la base.
 
 ### Tipus
+
 #### P-CARD
 * Caducaven als 5 anys. 
+
 #### T-CARD
 * Les planes, pensades per activitats turístiques.
 * Té 20 memòries + check + start + finish.
+
 #### SI5
 * Vermella (ja no es fabrica)
 * 36 memòries (controls). 
 * Velocitat : X. Més lenta que les modernes.
 * Només permet curses de 12h.
+
 #### SI6
 * Permet gravar el dia de la setmana.
 * Curses de fins a 7 dies.
 * 60 memòries
 * Molt més ràpida que la SI6
+
 #### SI8
 * Encara més ràpida.
 * 30 memòries
 * Preu més econòmic que la SI6.
+
 #### SI9
 * 50 memòries.
 * Mateixa velocitat que la SI8. 
 * Per a corredors d'èlit, Rogaines, etc.
+
 #### SI10
 * 128 memòries
 * Pensada per a raids
@@ -106,127 +113,122 @@
 
 
 # Programar les bases electròniques
-* ''IMPORTANT'': Totes les bases que no són les de control, números de l'1 al 30.
+* __IMPORTANT__: Totes les bases que no són les de control, números de l'1 al 30.
 
 ## Modes de treball
 ### Control
 * Números superiors al 30: del 31 endavant (el 31 correspondria a la fita 1).
+
 ### Start
 * Com a sortida (número de l'1 al 30)
+
 ### Finish
 * Meta (número de l'1 al 30)
+
 ### Read SI Cards
 * Per descarregar la informació de la tarjeta a la base.
-* Serveix per:
-** Entrenaments.
-** Descarregar totes les targes a la base (per si falla el PC).
+* Serveix per a:
+  * Entrenaments.
+  * Descarregar totes les targes a la base (per si falla el PC).
 * La base USB pot tenir qualsevol de les altres funcions.
+
 ### Clean
 * Neteja
+
 ### Check
 * Comprova si està buit
 * No pita si no està net el xip.
+
 ### Printout
 * Permet imprimir directament a impressores de paper tèrmic.
+
 ### Start with time trigger
 * Amb fotocèl·lula
+
 ### Finish with time trigger
 * Amb fotocèl·lula
 
 ## Base SI-Master
 * Va juntament amb les targes liles ON-OFF
 * 3 funcions (es canvia de mode pinçant successives vegades fins a trobar el que interessa en el display):
-**''Time master'': per posar en hora les altres bases
-**''Extended master'': per posar en hora i netejar el backup de la base, tot alhora.
+  * _Time master_: per posar en hora les altres bases.
+  * _Extended master_: per posar en hora i netejar el backup de la base, tot alhora.
 
 ## A tenir en compte...
 * Per sota de 3.1V de càrrega no utilitzar les bases de control.
 
+## COMPTE AMB LA BASE USB!!
+* Si no té prou bateria, cal programar l'hora cada vegada que es desconnecta de l'ordinador (per l'alimentació).
+* Si no es reprograma l'hora, les P-CARD i T-CARD no es llegeixen.
+
+
 ## Programari utilitzat
 ### SI-Config
 * Per programar les bases.
+
 #### Modes de treball
-* Direct: per a programar la base USB.
-* Remote: per a programar la base de control que hi ha sobre la USB.
+* __Direct__: per a programar la base USB.
+* __Remote__: per a programar la base de control que hi ha sobre la USB.
+
 #### Opcions del programa
+
 ##### READ
-* ''Working time'': temps de treball (per anar bé, 3 hores, 03:00:00)
-* ''Auto send'': funció per enviar a Internet o altre dispositiu extern quan es fa la pinçada.
+* _Working time_: temps de treball (per anar bé, 3 hores, 03:00:00)
+* _Auto send_: funció per enviar a Internet o altre dispositiu extern quan es fa la pinçada.
 * Icona de la lupa: permet llegir les dades internes de la base de control.
 
 ##### WRITE
-* ''Code no.'': número del control
-* ''Working time'': període de funcionament
-* ''Set time'': botó independent de l'escriptura, i el que fa és posar en hora la base.
-* Bóto ''WRITE'': configura tots els paràmetres i esborra el backup de la base.
-*'' Turn off after write'': apaga la base després de reprogramar-la.
-*'''COMPTE!''' Cada vegada que es prem el botó WRITE s'incrementa automàticament el ''Code no.'' en el programa. Si deixem la mateixa base i tornem a prémer WRITE ens canviarà el ''Code no.''
+* _Code no._: número del control
+* _Working time_: període de funcionament
+* _Set time_: botó independent de l'escriptura, i el que fa és posar en hora la base.
+* Botó _WRITE_: configura tots els paràmetres i esborra el backup de la base.
+* _Turn off after write_: apaga la base després de reprogramar-la.
+* **COMPTE!** Cada vegada que es prem el botó WRITE s'incrementa automàticament el _Code no._ en el programa. Si deixem la mateixa base i tornem a prémer WRITE ens canviarà el _Code no._
 
 ##### LOG FILE
 * Per veure el que s'ha fet en el programa
 
 ##### VIEW
-*Standard: el més segur i senzill
-*Extended: apareixen nous camps
-    *''Real time clock''
-    *''Sprint'': capturar ms per a cèl·lules fotoelèctriques
-    *''Stop if backup is full'': s'apaga si s'ha omplert el backup
-    *''Extended protocol''
+* _Standard_: el més segur i senzill
+* _Extended_: apareixen nous camps
+  * _Real time clock_
+  * _Sprint_: capturar ms per a cèl·lules fotoelèctriques
+  * _Stop if backup is full_: s'apaga si s'ha omplert el backup
+  * _Extended protocol_
 
 ##### View Punch (icona amb rellotge)
-*Recuperar les descàrregues de la base USB.
-*Ha de funcionar en mode DIRECT.
-
-
+* Recuperar les descàrregues de la base USB.
+* Ha de funcionar en mode DIRECT.
 
 ## SI-Boot
 * Per actualitzar el firmware de cada base
-
-
 
 # Programa de gestió de curses: OE2010 (v.11)
 ## Versions
 * 500 participants (STANDARD)
 * 1000 participants (PRO)
 * + de 1000 participants (PRO LARGE).
-* Per a les 3 versions hi ha la funció MT ('''multiday''', per a varis dies): és una llicència addicional i cal comprar-la.
+* Per a les 3 versions hi ha la funció MT (*_multiday_*, per a varis dies): és una llicència addicional i cal comprar-la.
 
-## OEScore v.10.3
-*Per organitzar curses score individuals o per equips.
+## Introduir la llicència
+* CODI: té la forma ...   614B15D45C7ECDEA9D
+* Dades de la llicència:
+  * Aplicación: OE 2010 (M)--> indica MULTIDAY
+  * Tipo: Pro
+  * Versión: v.11
+  * Caducidad: 09/12/2011 (exemple)
 
-
-
-
-### COMPTE AMB LA BASE USB
-
-
-*Cal programar l'hora cada vegada que es desconnecta de l'ordinador (per l'alimentació).
-*Si no es reprograma l'hora les P-CARD i T-CARD no es llegeixen.
-
-# Actualitzar el Firmware de les bases
-*S'utilitza el SI-Boot
-*En el mateix fitxer que et descarregues ja hi ha els fitxers amb l'actualització del firmware.
-
-# OE 2010 v.11
-*Posar llicència
-    * CODI: 614B15D45C7ECDEA9D
-*Dades de la llicència:
-    *Aplicación: OE 2010 (M)--> indica MULTIDAY
-    *Tipo: Pro
-    *Versión: v.11
-    *Caducidad: 09/12/2011
-
-## Multidia
-*Spinner de la barra d'eines on apareix l'etapa: E1, E2, ...
+## Gestió de curses de varis dies 
+*Apareix un selector amb fletxes (amunt-avall) a la barra d'eines,  on mostra l'etapa: E1, E2, ...
 *Els canvis es fan sobre l'etapa activa.
 
-## Crear un ESEDEVENIMENT
- EVENTO > NUEVO
+## Crear una CURSA (esdeveniment)
+  EVENTO > NUEVO
 
 ## CONFIGURACIÓ DE L'ESEDEVENIMENT
  EVENTO > AJUSTES
 *Inform. extra 1 i 2: camps informatius extres
-*Botó '''Ajustes''':
+*Botó _'Ajustes_':
     *Hora Zero: l'hora a partir de la qual el programa compta que surt el primer corredor.
     **Si ja s'han sortejat les hores i ja s'han publicat, si s'ha de canviar l'hora, per exemple 15min més tard, cal canviar l'hora 0. En els llistats de sortida, continuaríem a l'hora publicada.
     *Toma de tiempos:
@@ -267,7 +269,7 @@
 
  INSCRIPCIONES > IMPORTAR
 
-*'''ATENCIÓ!! No importar dades si ja s'han publicat hores de sortida, ja que es poden perdre les hores sortejades!!'''
+*_'ATENCIÓ!! No importar dades si ja s'han publicat hores de sortida, ja que es poden perdre les hores sortejades!!_'
 
 #### Columnes del fitxer d'importació
 
@@ -347,10 +349,10 @@
 
  DIA COMPETICION > EVALUAR CHIPS
 
-*'''CAS d'UNA SITUACIÓ ANORMAL'''
+*_'CAS d'UNA SITUACIÓ ANORMAL_'
  Un corredor i tots els de darrera seu tenen el mateix problema en una base es pot agafar la base i comprovar què passa (en cas contrari no es pot comprovar). El corredor pot haver marcat manualment en el mapa el control però això no serveix.
 
-* '''SOLUCIÓ'''
+* _'SOLUCIÓ_'
  S'ha d'inserir el control a tots els corredor després de validar que ha fallat la base. Cal fer-ho des del menú ACCIONES->INSERTAR
 
 *Si un corredor ha corregut una categoria que no era la seva, cal fer el següent:
@@ -397,13 +399,13 @@
 *Abans s'ha de fer EVALUAR ESTACIONES SI:
     *El millor és utilitzar la base de NETEJA o la de CHECK.
 *#Descarregar picades.
-*#''Competidores que no tomaron la salida'': el programa els marca com a corredors que no han sortit.
+*#_Competidores que no tomaron la salida_: el programa els marca com a corredors que no han sortit.
 
 ## Recorreguts
 ### Categories
 
 
-*Interessant l'opció '''Categorias indiv.''' per indicar en quines categories s'assignen recorreguts individuals als corredors (si és el cas).
+*Interessant l'opció _'Categorias indiv._' per indicar en quines categories s'assignen recorreguts individuals als corredors (si és el cas).
 
 ### Importar
 
@@ -430,6 +432,11 @@
 *Com es planifiquen les "sortides a la caça"?
 *#Cal fer-ho en la modalitat "Varis dies" i dins la finestra de creació de l'esdeveniment, hi ha un checkbox "Sortida a la caça" que cal marcar. Això farà que el darrer dia sigui el de "sortida a la caça" i no faci falta fer el sorteig.
 
+
+# OEScore v.10.3
+*Per organitzar curses score individuals o per equips.
+
+
 # Autodownload
 [[Fitxer:Autodownload.jpg]([Usuari:Mnicolau|Mnicolau]])]
 
@@ -444,52 +451,52 @@
 *Validate start times are unique on each course? No
 *Max. Team Size: mida màxima dels equips (l'equip que té més persones). En Rogaines, 5. En Raids, 3.
 *Team combination: volem que obligatòriament tots els membres de l'equip pincin la base, que només siguin 1, ...
-    *''None'': han de picar tots, però no té en compte l'intèrval entre les picades.
-    *''Lazy'': que només pinci un de l'equip.     *
-    *''Stric (insist all punch within one minute)'': que passin en menys d'1 minut.
-    *''Stric (insist all punch within five minute)'': que passin en menys de 5 minuts.
-    *''Stric (insist all punch within fifteen minute)'': que passin en menys de 15 minuts.
-*''Earliest punch'': per si és de matí o de tarda.
-*''Print splits automatically on download''
-*''Show position on splits print and download screens'': mostrar la posició en imprimir (en rogaine no s'ha de posar, només posar-lo en raids)
-    *''Splits advertising'': text publicitari.
+    *_None_: han de picar tots, però no té en compte l'intèrval entre les picades.
+    *_Lazy_: que només pinci un de l'equip.     *
+    *_Stric (insist all punch within one minute)_: que passin en menys d'1 minut.
+    *_Stric (insist all punch within five minute)_: que passin en menys de 5 minuts.
+    *_Stric (insist all punch within fifteen minute)_: que passin en menys de 15 minuts.
+*_Earliest punch_: per si és de matí o de tarda.
+*_Print splits automatically on download_
+*_Show position on splits print and download screens_: mostrar la posició en imprimir (en rogaine no s'ha de posar, només posar-lo en raids)
+    *_Splits advertising_: text publicitari.
 
 
-## Recorreguts (''Course'')
+## Recorreguts (_Course_)
 *S'hi pot accedir després d'haver escollit l'esdeveniment. 
 
 ### Add course
 
 
-*''Name''
-*''Course checking''
-    *''Linear''
-    *''Score'': fas les fites que vols (rogaine)
-    *''Spanish score'': s'han de fer totes les fites en l'ordre que vols
-    *''Linear with butterfly''
-    *''Linear with time penalties''
-    *''Linear with free order sections''
-    *''Linear figure of eight''
-*''Score minutes'': temps màxim que es vol donar (en un Rogaine de 6h, 3600min)
+*_Name_
+*_Course checking_
+    *_Linear_
+    *_Score_: fas les fites que vols (rogaine)
+    *_Spanish score_: s'han de fer totes les fites en l'ordre que vols
+    *_Linear with butterfly_
+    *_Linear with time penalties_
+    *_Linear with free order sections_
+    *_Linear figure of eight_
+*_Score minutes_: temps màxim que es vol donar (en un Rogaine de 6h, 3600min)
 
 ## Controls
 ### Add/Insert control
 
 
-*''Number'': núm d'ordre
-*''Published code'': el codi de la base
-*''Control Type'': en funció del tipus de cursa té unes opcions o altres
-*''Description'': la descripció textual
-*''Electronic code 1..5'': fins a 5 codis de control diferents (per exemple com a controles de reemplazo)
-*''Exclude leg from total time?'': per raids, per neutralitzar trams. Exclou des del control anterior que hagi marcat el corredor fins al que estem configurant.
-*''Maximum excluded time'':  
-*''Team size / num punched'':
+*_Number_: núm d'ordre
+*_Published code_: el codi de la base
+*_Control Type_: en funció del tipus de cursa té unes opcions o altres
+*_Description_: la descripció textual
+*_Electronic code 1..5_: fins a 5 codis de control diferents (per exemple com a controles de reemplazo)
+*_Exclude leg from total time?_: per raids, per neutralitzar trams. Exclou des del control anterior que hagi marcat el corredor fins al que estem configurant.
+*_Maximum excluded time_:  
+*_Team size / num punched_:
 
 ## Penalties
 ### Add Penalty
 
 
-*''Seconds from'': ?? // ha quedat pendent.
+*_Seconds from_: ?? // ha quedat pendent.
 
 
 # OEScore (Rogaines)
