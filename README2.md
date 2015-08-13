@@ -445,7 +445,7 @@ _Nova versió del programa: SI-Config+_
 * Un corredor descarrega amb un núm SI que no estava registrat. Què fer?
   * Surt un avís, i si sabem el dorsal el posem. Automàticament el programa lliga amb les dades del corredor.
   * Si no es té el dorsal, es posa en reserva. Llavors, anem a EVALUAR XIPS>EDITAR>MOVER XIP i es mou cap a la persona que ha de tenir-lo.
-*Com es planifiquen les "sortides a la caça"?
+* Com es planifiquen les "sortides a la caça"?
   * Cal fer-ho en la modalitat "Varis dies" i dins la finestra de creació de l'esdeveniment, hi ha un checkbox "Sortida a la caça" que cal marcar. Això farà que el darrer dia sigui el de "sortida a la caça" i no faci falta fer el sorteig.
 
 --
@@ -460,10 +460,6 @@ _Nova versió del programa: SI-Config+_
 * Serveixen per indicar les penalitzacions.
 * Exemple:
  0 a 5min (-5), 5 a 10min(-5), 10 a 15min (-10), 15 a 20min(-10), 20 a 25min(-10), 25 a 30min (-10), >30min (desqualificat))
-
-* Cal definir les següents bandes de temps:
-[*La Regla de penalització que cal definir és:
-[[Fitxer:ReglesRogaine.png]([Fitxer:BandesTemps.png]])]
 
 * Si es creen dos tipus de cursa (6 i 12h per exemple) cal assignar un temps límit diferent a cada categoria.
  
