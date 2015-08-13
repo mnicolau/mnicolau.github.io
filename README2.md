@@ -61,11 +61,13 @@
 
 #### pCARD
 * Té 20 memòries + clear + start + finish.
+
 ![pCard](/images/sportident/pCard.jpg)
 
 #### tCARD
 * Pensades per activitats turístiques.
 * Té 25 memòries + start + finish.
+
 ![tCard](/images/sportident/tCard.jpg)
 
 #### SI-Card5
@@ -73,37 +75,43 @@
 * 36 memòries (controls). 
 * Velocitat : X. Més lenta que les modernes.
 * Només permet curses de 12h.
+
 ![SI-Card5](/images/sportident/SI-Card5.jpg)
 
 #### SI-Card6
 * Permet gravar el dia de la setmana.
 * Curses de fins a 7 dies.
 * 60 memòries
-* Molt més ràpida que la SI5
+* Molt més ràpida que la SI5.
+
 ![SI-Card6](/images/sportident/SI-Card6.jpg)
 
 #### SI-Card8
 * Encara més ràpida.
 * 30 memòries
 * Preu més econòmic que la SI6.
+
 ![SI-Card8](/images/sportident/SI-Card8.png)
 
 #### SI-Card9
 * 50 memòries.
 * Mateixa velocitat que la SI8. 
 * Per a corredors d'èlit, Rogaines, etc.
+
 ![SI-Card9](/images/sportident/SI-Card9.jpg)
 
 #### SI-Card10
 * 128 memòries
 * Pensada per a raids
 * Preu similar a la SI6.
+
 ![SI-Card10](/images/sportident/SI-Card10.jpg)
 
 #### SI-Card11
 * Característiques similars a la SI10.
 * Incorpora un led que indica que s'ha fet pinçada.
 * També té una petita bateria.
+
 ![SI-Card11](/images/sportident/SI-Card11.png)
 
 
@@ -111,6 +119,7 @@
 * Característiques similars a la SI11.
 * A més del led, incropora senyal acústic.
 * També incorpora ràdiofreqüència, amb la tecnologia AIR+, la qual cosa permet obtenir dades de les targes en temps real (per exemple, fita vista).
+
 ![SIAC](/images/sportident/SIAC.jpg)
 
 ### Funcionament del xip
@@ -118,9 +127,11 @@
 
 ## Altres Dispositius
 ### Bases amb radiofreqüència
+
 ![Bases amb ràdio freqüència](/images/sportident/RadioControlSetSmall.jpg)
 
 ### Impressores tèrmiques
+
 ![Impressora tèrmica](/images/sportident/EpsonTMT20.jpg)
 
 
