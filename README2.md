@@ -433,7 +433,7 @@ _Nova versió del programa: SI-Config+_
 * El traçador exporta des de l'OCAD (definint molt bé categories i recorreguts), millor en format XML.
 * El fitxer exportat de l'OCAD (amb extensió XML), s'importa a SportIdent.
 
-### Configurar recorreguts SCORE i LINIALS barrejats
+### Configurar recorreguts SCORE i LINEALS barrejats
 * Anar a RECORRIDOS
 * En el camp COMPROBACIÓN DE CÓDIGOS posar-lo a MIXTA
 * Si és tot SCORE, a la columna DIVISOR no hi posem res.
