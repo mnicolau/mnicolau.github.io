@@ -191,7 +191,7 @@
 
 _Programa SI-Config_
 
-![SI-Config](/images/sportident/SI-Config.png)
+![SI-Config](/images/sportident/Si-Config.png)
 
 _Nova versió del programa: SI-Config+_
 
