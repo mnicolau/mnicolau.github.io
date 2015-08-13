@@ -1,7 +1,7 @@
 <!-- MarkdownTOC -->
 
 - [Introducció](#introducció)
-- [Dispositius basics utilitzats amb el sistema SportIdent](#dispositius-basics-utilitzats-amb-el-sistema-sportident)
+- [Dispositius bàsics utilitzats amb el sistema SportIdent](#dispositius-bàsics-utilitzats-amb-el-sistema-sportident)
   - [Bases](#bases)
   - [Xip (tarja electrònica)](#xip-tarja-electrònica)
   - [Altres Dispositius](#altres-dispositius)
@@ -10,7 +10,7 @@
   - [Base SI-Master](#base-si-master)
   - [A tenir en compte...](#a-tenir-en-compte)
   - [COMPTE AMB LA BASE USB!!](#compte-amb-la-base-usb)
-  - [Programari utilitzat](#programari-utilitzat)
+  - [Programari utilitzat per a programar les bases](#programari-utilitzat-per-a-programar-les-bases)
   - [SI-Boot](#si-boot)
 - [Programa de gestió de curses: OE2010 (v.11)](#programa-de-gestió-de-curses-oe2010-v11)
   - [Versions](#versions)
@@ -37,7 +37,7 @@
 * Data: agost de 2015
 
 
-# Dispositius basics utilitzats amb el sistema SportIdent
+# Dispositius bàsics utilitzats amb el sistema SportIdent
 ## Bases
 ### BSF8
 * és la reglamentària. Conté un display que permet visualitzar la informació emmagatzemada en la base.
@@ -185,7 +185,10 @@
 * Si no es reprograma l'hora, les P-CARD i T-CARD no es llegeixen.
 
 
-## Programari utilitzat
+## Programari utilitzat per a programar les bases
+
+* [Enllaç a tot el programari ofert per SportIdent](http://www.sportident.com/index.php?option=com_content&view=article&id=106&Itemid=2622&lang=en)
+
 ### SI-Config (nova versió es diu SIConfig+)
 * Per programar les bases.
 
@@ -235,6 +238,14 @@ _Nova versió del programa: SI-Config+_
 * Per actualitzar el firmware de cada base
 
 # Programa de gestió de curses: OE2010 (v.11)
+
+* [Enllaç a tot el programari ofert per l'empresa SportSoftware](http://www.sportsoftware.de/downloads/)
+
+* _Exemple de captura del programa OE2010 v.11_
+
+![OE2010 v.11](/images/oe2010/oe2010.png)
+
+
 ## Versions
 * 500 participants (STANDARD)
 * 1000 participants (PRO)
@@ -242,7 +253,7 @@ _Nova versió del programa: SI-Config+_
 * Per a les 3 versions hi ha la funció MT (*_multiday_*, per a varis dies): és una llicència addicional i cal comprar-la.
 
 ## Introduir la llicència
-* CODI: té la forma ...   614B15D45C7ECDEA9D
+* CODI: té amb la forma ...   614B15D45C7ECDEA9D
 * Dades de la llicència:
   * Aplicación: OE 2010 (M)--> indica MULTIDAY
   * Tipo: Pro
