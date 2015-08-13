@@ -186,8 +186,16 @@
 
 
 ## Programari utilitzat
-### SI-Config
+### SI-Config (nova versió es diu SIConfig+)
 * Per programar les bases.
+
+_Programa SI-Config_
+
+![SI-Config](/images/sportident/SI-Config.png)
+
+_Nova versió del programa: SI-Config+_
+
+![SI-Config+](/images/sportident/SI-Config+.png)
 
 #### Modes de treball
 * __Direct__: per a programar la base USB.
@@ -213,7 +221,7 @@
 
 ##### VIEW
 * _Standard_: el més segur i senzill
-* _Extended_: apareixen nous camps
+* _Expert_: apareixen nous camps
   * _Real time clock_
   * _Sprint_: capturar ms per a cèl·lules fotoelèctriques
   * _Stop if backup is full_: s'apaga si s'ha omplert el backup
