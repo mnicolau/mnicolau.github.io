@@ -30,8 +30,6 @@
 <!-- /MarkdownTOC -->
 
 
-
-
 # Introducció 
 * Formador: Marc Nicolau
 * Data: agost de 2015
