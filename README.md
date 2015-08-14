@@ -18,8 +18,8 @@
   - [Gestió de curses de varis dies](#gestió-de-curses-de-varis-dies)
   - [Crear una CURSA (esdeveniment)](#crear-una-cursa-esdeveniment)
   - [Configuració de la CURSA](#configuració-de-la-cursa)
-  - [COPIA DE SEGURETAT](#copia-de-seguretat)
-  - [INSCRIPCIONS](#inscripcions)
+  - [Còpia de seguretat](#còpia-de-seguretat)
+  - [Inscripcions](#inscripcions)
   - [Dia de competició](#dia-de-competició)
   - [Recorreguts](#recorreguts)
   - [HOW-TO'S](#how-tos)
@@ -259,8 +259,8 @@ _Nova versió del programa: SI-Config+_
   * Caducidad: 09/12/2011 (exemple)
 
 ## Gestió de curses de varis dies 
-*Apareix un selector amb fletxes (amunt-avall) a la barra d'eines,  on mostra l'etapa: E1, E2, ...
-*Els canvis es fan sobre l'etapa activa.
+* Apareix un selector amb fletxes (amunt-avall) a la barra d'eines, on mostra l'etapa: E1, E2, ...
+* Els canvis es fan sobre l'etapa activa.
 
 ## Crear una CURSA (esdeveniment)
   EVENTO > NUEVO
@@ -277,11 +277,11 @@ _Nova versió del programa: SI-Config+_
       * No es marca quan es treballa amb cèl·lula fotoelèctrica.
     * Modo: "toma de tiempos", "entrada en orden" (per sortida en massa)
 
-## COPIA DE SEGURETAT
+## Còpia de seguretat
 * Fer còpia regularment.
 * __RECOMANAT__: en PEN DRIVE o en un altre PC.
 
-## INSCRIPCIONS
+## Inscripcions
 ###  Crear categories
 
 ###  Crear clubs
@@ -369,7 +369,7 @@ _Nova versió del programa: SI-Config+_
 ### Evaluar xips
   DIA COMPETICION > EVALUAR CHIPS
 
-*__EXEMPLE 1 d'UNA SITUACIÓ ANORMAL__
+* __EXEMPLE 1 d'UNA SITUACIÓ ANORMAL__
   * Un corredor i tots els de darrera seu tenen el mateix problema en una base.
   * Es pot agafar la base i comprovar què passa (en cas contrari no es pot saber).
   * El corredor pot haver marcat manualment en el mapa el control però això no serveix.
@@ -378,7 +378,7 @@ _Nova versió del programa: SI-Config+_
     * S'ha d'inserir el control a tots els corredor després de validar que ha fallat la base. 
     * Cal fer-ho des del menú ACCIONES->INSERTAR
 
-*__EXEMPLE 2 d'UNA SITUACIÓ ANORMAL__
+* __EXEMPLE 2 d'UNA SITUACIÓ ANORMAL__
   * Si un corredor ha corregut una categoria que no era la seva, cal fer el següent:
     * Primer cal posar-lo a l'estat "No classifica" (NC), des de la pantalla d'inscripcions.
     * A continuació, canviar-lo la categoria.
